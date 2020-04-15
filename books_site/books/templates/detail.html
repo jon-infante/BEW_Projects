@@ -4,5 +4,9 @@
       <h3>Number of pages: {{ book.num_pages }} </h3>
       <h3>Publish date:  {{ book.date_published }} </h3>
       <h3>Author: {{ book.author }} </h3>
-      <h3>Tags: {{ book.tags }} </h3>
+
+      <h3>Tags:
+            {% for tag in book.tags.all %}
+                  {{ tag }} 
+            {% endfor %}</h3>
 </ul>
